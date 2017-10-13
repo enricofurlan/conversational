@@ -1,0 +1,48 @@
+.message {
+    font: sans-serif;
+    font-size: 11px;
+    position: relative;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-left: 40px;
+    margin-bottom: 5px;
+    width: calc(100% - 50px);
+}
+
+.message--right {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.message--right .message__avatar {
+    left: auto;
+    right: 0
+}
+
+.message--right .message__message {
+    left: 0;
+    border-radius: 15px 15px 0 15px;
+}
+
+.message__avatar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 25px;
+    _border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.message__message {
+    position: relative;
+    font-family: sans-serif;
+    color: #444;
+    padding-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px 15px 15px 0px;
+    background: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}

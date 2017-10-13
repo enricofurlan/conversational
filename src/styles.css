@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+app-root {
+    width: 384px;
+    height: 512px;
+    outline: 1px solid #444;
+    margin: 50px;
+    display: block;
+}
+
+.message__link {
+    text-decoration: underline;
+}
+
+.message__link:hover {
+    color: blue;
+    cursor: pointer;
+    display: inline-block;
+}
