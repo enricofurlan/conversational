@@ -6,6 +6,7 @@ app-root {
     outline: 1px solid #444;
     margin: 50px;
     display: block;
+    background: #444;
     /* font list from GitHub Desktop*/
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
 }
