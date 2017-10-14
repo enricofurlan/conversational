@@ -1,5 +1,10 @@
 <div class="message" [ngClass]="[message.class || 'message--left']">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
-    <a class="message__link"></a>
+
+    <div class="message__meta">
+        <div class="message__username">{{message.username}}</div>
+        <div class="message__date">{{message.date}}</div>
+        <a class="message__link"></a>
+    </div>
 </div>
