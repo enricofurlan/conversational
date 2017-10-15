@@ -1,3 +1,4 @@
+<!-- default -->
 <div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'base'">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
@@ -10,6 +11,7 @@
 </div>
 
 <!-- pick template at runtime -->
+<!-- graph -->
 <div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'graph'">
 
     <img class="message__avatar" [src]="message.src">
@@ -19,10 +21,6 @@
         <img [src]="'./assets/pie.svg'" class="message__chart" alt="" />
         <span [innerHTML]="sanitizedMessage" class="message__inner"></span>
     </div>
-
-
-
-
     <div class="message__meta">
         <div class="message__username">{{message.username}}</div>
         <div class="message__date">{{message.date}}</div>
@@ -30,7 +28,7 @@
     </div>
 </div>
 
-
+<!-- simulation -->
 <div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'simulation'">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
@@ -41,7 +39,7 @@
         <a class="message__link"></a>
     </div>
 </div>
-
+<!-- choice -->
 <div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'choice'">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>

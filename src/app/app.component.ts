@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, HostBinding } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import * as Rx from 'rxjs';
 import { FredService } from './fred.service';
@@ -14,17 +14,25 @@ export class AppComponent implements OnInit {
   messagesObservable: Observable<any>;
   messageObservable: Rx.Subject<any>;
   fredsMessages: Rx.Subject<any>;
+  @HostBinding('class') public cssClass;
+
   @ViewChild(ChatComponent) chat: ChatComponent;
   // @Input('onScroll') scrollChat;
   messages = [];
   showSpeed = 500;
-
+  fullscreen;
   constructor(public fred: FredService) { }
 
 
   //scrollChat() {
   //  console.log('scroll chat');
   //}
+  onDblClick() {
+    // debugger;
+    this.fullscreen = !this.fullscreen;
+
+    this.cssClass = this.fullscreen ? 'app--fullscreen' : '';
+  }
 
   ngOnInit() {
 

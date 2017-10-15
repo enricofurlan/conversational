@@ -24,4 +24,6 @@ import { FredService } from './fred.service';
   providers: [FredService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+}
