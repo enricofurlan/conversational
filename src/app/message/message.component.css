@@ -1,5 +1,6 @@
 .message {
-    font-size: 11px;
+    font-size: 15px;
+    /*11px;*/
     position: relative;
     padding-bottom: 25px;
     padding-top: 10px;
@@ -56,6 +57,7 @@
     bottom: 0;
     bottom: 10px;
     left: 11px;
+    font-size: 11px;
 }
 
 .message--left .message__meta {
