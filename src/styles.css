@@ -1,14 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 app-root {
-    width: 384px;
-    height: 512px;
-    outline: 1px solid #444;
-    margin: 50px;
+    width: 359px;
+    height: 634px;
+    _outline: 1px solid #444;
+    _margin: 50px;
     display: block;
     background: #444;
     /* font list from GitHub Desktop*/
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+    z-index: 100;
+    position: absolute;
+    top: 116px;
+    left: 72px;
+    box-shadow: inset 0px 0px 10px black;
 }
 
 .message__link {
@@ -19,4 +24,18 @@ app-root {
     color: blue;
     cursor: pointer;
     display: inline-block;
+}
+
+body .device {
+    background: url(./assets/devices.png) no-repeat top left;
+    width: 400px;
+    height: 830px;
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    z-index: 1;
+}
+
+body {
+    _zoom: 0.7;
 }

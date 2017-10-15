@@ -1,4 +1,48 @@
-<div class="message" [ngClass]="[message.class || 'message--left']">
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'base'">
+    <img class="message__avatar" [src]="message.src">
+    <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
+
+    <div class="message__meta">
+        <div class="message__username">{{message.username}}</div>
+        <div class="message__date">{{message.date}}</div>
+        <a class="message__link"></a>
+    </div>
+</div>
+
+<!-- pick template at runtime -->
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'graph'">
+
+    <img class="message__avatar" [src]="message.src">
+    <div class="message__message">
+        <div class="message__title" *ngIf="message.title">{{message.title}}</div>
+        <!-- http://ceagon.com/tools/charts -->
+        <img [src]="'./assets/pie.svg'" class="message__chart" alt="" />
+        <span [innerHTML]="sanitizedMessage" class="message__inner"></span>
+    </div>
+
+
+
+
+    <div class="message__meta">
+        <div class="message__username">{{message.username}}</div>
+        <div class="message__date">{{message.date}}</div>
+        <a class="message__link"></a>
+    </div>
+</div>
+
+
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'simulation'">
+    <img class="message__avatar" [src]="message.src">
+    <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
+
+    <div class="message__meta">
+        <div class="message__username">{{message.username}}</div>
+        <div class="message__date">{{message.date}}</div>
+        <a class="message__link"></a>
+    </div>
+</div>
+
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'choice'">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
 

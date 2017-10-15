@@ -2,4 +2,4 @@
     <app-message *ngFor="let message of messages" [message]="message"></app-message>
 </div>
 
-<app-chat-input></app-chat-input>
+<app-chat-input [mo]="messageObservable"></app-chat-input>

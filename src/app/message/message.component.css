@@ -38,11 +38,17 @@
     position: relative;
     color: #444;
     padding-left: 20px;
-    padding: 10px;
+    padding: 5px 5px 5px 10px;
     border: 1px solid #ccc;
     border-radius: 15px 15px 15px 0px;
     background: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message__message::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .message__meta {
@@ -72,4 +78,23 @@
     font-style: italic;
     color: #999393;
     display: inline-block;
+}
+
+.message__chart {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.message__inner {
+    display: inline;
+}
+
+.message__title {
+    color: white;
+    background: #444;
+    margin: -6px -6px 10px -11px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0px 0px;
 }
