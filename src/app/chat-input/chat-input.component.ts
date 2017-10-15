@@ -9,15 +9,19 @@ export class ChatInputComponent implements OnInit {
 
   usertext;
   previousUserText;
+  type: string = 'free';
   @Input('mo') messageObservable: Rx.Subject<any>;
-
+  // inptut type controls the type of input required...
+  // @Input('type') type:string = 'free';
   constructor() { }
 
   ngOnInit() {
     // this.messageObservable = new Rx.Subject();
   }
 
-  
+  setInputType(type: string): void {
+    this.type = type;
+  }
 
   onKey(event) {
     if (event.which === 13) {
@@ -25,9 +29,9 @@ export class ChatInputComponent implements OnInit {
       this.messageObservable.next(this.usertext);
       this.previousUserText = this.usertext;
       this.usertext = '';
-    }else if(event.which === 38){
+    } else if (event.which === 38) {
       this.usertext = this.previousUserText;
-    }else{
+    } else {
       console.log(event.which);
     }
   }

@@ -1,3 +1,14 @@
-<div class="chat-input">
-    <input type="text" class="chat-input__input" [(ngModel)]="usertext" (keyup)="onKey($event)" placeholder="Type and press Enter send the message &hellip;">
+<div class="chat-input" *ngIf="type!='hidden'">
+    <input *ngIf="type=='free'" type="text" class="chat-input__input" [(ngModel)]="usertext" (keyup)="onKey($event)" placeholder="Type and press Enter send the message &hellip;">
+
+    <div *ngIf="type=='choice'" class="chat-input__group">
+        <a class="chat-input__button">Yes</a>
+        <a class="chat-input__button">No</a>
+    </div>
+
+    <div *ngIf="type=='simulation'" class="chat-input__group">
+        some simulation
+        <a class="chat-input__button">Ok</a>
+
+    </div>
 </div>

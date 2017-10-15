@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   messages = [];
   showSpeed = 500;
   fullscreen;
+  type: 'choice';
   constructor(public fred: FredService) { }
 
 
@@ -63,6 +64,7 @@ export class AppComponent implements OnInit {
 
       // fred messages as jubject, user message as value, for further analysis
       this.fred.think(value, this.fredsMessages); // this will automatically result in this.fredMessages.next(messageObject)
+      // this.chat.setInputType('choice');
 
     });
 
