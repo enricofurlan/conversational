@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
       { title: "Graph", type: "graph", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/fred.jpeg", class: 'message--left', message: "Please examine this graph. This is the percentage of &hellip;" },
       { title: "Simulation", type: "simulation", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/fred.jpeg", class: 'message--left', message: "Use the provided controls to simulate a scenario. then click ok when you are OK with the results." },
       { title: "Choose", type: "base", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/fred.jpeg", class: 'message--left', message: "Please choose between A and B. A is more for conservative people, B is if you are eager to risk" },
-      { title: "Choose", type: "choice", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/fred.jpeg", class: 'message--left', message: "Please choose between A and B. A is more for conservative people, B is if you are eager to risk" },
+      { title: "Choose", type: "choice", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/user.jpeg", class: 'message--right', message: "Please choose between A and B. A is more for conservative people, B is if you are eager to risk" },
       { title: "Are you thinking this ?", type: "bubble", username: "Fred", date: "Oct 14th 2017 9:38", src: "./assets/fred.jpeg", class: 'message--left', message: "Thinking..." },
     ]);
 
