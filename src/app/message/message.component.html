@@ -40,7 +40,7 @@
     </div>
 </div>
 <!-- choice -->
-<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'choice'">
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'bubble'">
     <img class="message__avatar" [src]="message.src">
     <div class=" message__message " [innerHTML]="sanitizedMessage"></div>
 
@@ -49,4 +49,32 @@
         <div class="message__date">{{message.date}}</div>
         <a class="message__link"></a>
     </div>
+</div>
+
+<!-- grid choice -->
+<div class="message" [ngClass]="[message.class || 'message--left']" *ngIf="message.type == 'choice'">
+  <img class="message__avatar" [src]="message.src">
+  <div class=" message__message">
+    <div class="message__title" *ngIf="message.title">{{message.title}}</div>
+    <ul class="message__grid">
+      <li class="message__cell" (click)="makeChoice('A')"><a class="message__button" >A</a></li>
+      <li class="message__cell" (click)="makeChoice('B')"><a class="message__button"  >B</a></li>
+      <li class="message__cell" (click)="makeChoice('B')"><a class="message__button"  >I don't know</a></li>
+      <!--<li class="message__cell"><a class="message__button">Choice 3</a></li>
+      <li class="message__cell"><a class="message__button">Choice 4</a></li>
+      <li class="message__cell"><a class="message__button">Choice 5</a></li>
+      <li class="message__cell"><a class="message__button">Choice 6</a></li>-->
+
+      <div class="bubble-big"></div>
+      <div class="bubble-med"></div>
+      <div class="bubble-small"></div>
+    </ul>
+  </div>
+
+
+  <div class="message__meta">
+    <div class="message__username">{{message.username}}</div>
+    <div class="message__date">{{message.date}}</div>
+    <a class="message__link"></a>
+  </div>
 </div>

@@ -1,102 +1,168 @@
 .message {
-    font-size: 15px;
-    /*11px;*/
-    position: relative;
-    padding-bottom: 25px;
-    padding-top: 10px;
-    padding-left: 40px;
-    margin-bottom: 5px;
-    width: calc(100% - 50px);
+  font-size: 15px;
+  /*11px;*/
+  position: relative;
+  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-left: 40px;
+  margin-bottom: 5px;
+  width: calc(100% - 50px);
 }
 
 .message--right {
-    padding-left: 0;
-    padding-right: 40px;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 .message--right .message__avatar {
-    left: auto;
-    right: 0
+  left: auto;
+  right: 0
 }
 
 .message--right .message__message {
-    left: 0;
-    border-radius: 15px 15px 0 15px;
+  left: 0;
+  border-radius: 15px 15px 0 15px;
 }
 
 .message__avatar {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 25px;
-    _border: 1px solid #ccc;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  _border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .message__message {
-    position: relative;
-    color: #444;
-    padding-left: 20px;
-    padding: 5px 5px 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px 15px 15px 0px;
-    background: white;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: #444;
+  padding-left: 20px;
+  padding: 5px 5px 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px 15px 15px 0px;
+  background: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .message__message::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .message__meta {
-    position: absolute;
-    bottom: 0;
-    bottom: 10px;
-    left: 11px;
-    font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  bottom: 10px;
+  left: 11px;
+  font-size: 11px;
 }
 
 .message--left .message__meta {
-    right: 11px;
-    text-align: right;
+  right: 11px;
+  text-align: right;
 }
 
 .message__username {
-    font-weight: bold;
-    color: #666;
-    display: inline-block
+  font-weight: bold;
+  color: #666;
+  display: inline-block
 }
 
 .message--left .message__username {
-    float: right;
-    margin-left: 3px;
+  float: right;
+  margin-left: 3px;
 }
 
 .message__date {
-    font-style: italic;
-    color: #999393;
-    display: inline-block;
+  font-style: italic;
+  color: #999393;
+  display: inline-block;
 }
 
 .message__chart {
-    width: 100px;
-    height: 100px;
-    float: right;
+  width: 100px;
+  height: 100px;
+  float: right;
 }
 
 .message__inner {
-    display: inline;
+  display: inline;
 }
 
 .message__title {
-    color: white;
-    background: #444;
-    margin: -6px -6px 10px -11px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px 10px 0px 0px;
+  color: white;
+  background: #444;
+  margin: -6px -6px 10px -11px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+}
+
+.message__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  _border: 1px solid #ccc;
+  border-radius: 15px;
+  z-index: 99;
+  font-size: 15px;
+  position: relative;
+
+}
+
+.message__grid .bubble-big{
+
+  display: block;
+  position: absolute;
+  right: -17px;
+  bottom: 35px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 10px;
+  border:1px solid #ccc;
+}
+
+.message__grid .bubble-med {
+  display: block;
+  position: absolute;
+  right: -24px;
+  bottom: 18px;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+
+.message__grid .bubble-small {
+  display: block;
+  position: absolute;
+  right: -22px;
+  bottom: 26px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+ .message__cell {
+  display: block;
+  text-align: center;
+  background: #ccc;
+  margin: 0 5px 5px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+
+.message__cell:hover{
+  background:#ddd;
 }
