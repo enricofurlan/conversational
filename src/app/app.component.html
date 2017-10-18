@@ -1,2 +1,5 @@
-<app-chat [messages]="messages" [mo]="messageObservable"></app-chat>
+<a routerLink="/page-conversation" routerLinkActive="active">chat</a>
+<a routerLink="/config" routerLinkActive="config">config</a>
+
+<router-outlet></router-outlet>
 <div class="device" (click)="onDblClick()"></div>

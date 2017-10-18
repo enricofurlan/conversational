@@ -7,9 +7,28 @@ import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatInputComponent } from './chat-input/chat-input.component';
-import { FredService } from './fred.service';
-import { UserService } from './user.service';
+import { FredService } from './services/fred.service';
+import { UserService } from './services/user.service';
 import { SimulationComponent } from './simulation/simulation.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ConfigComponent } from './config/config.component';
+import { PageConversationComponent } from './page-conversation/page-conversation.component';
+
+const appRoutes: Routes = [
+  { path: 'config', component: ConfigComponent },
+  //{ path: 'hero/:id',      component: HeroDetailComponent },
+  {
+    path: 'page-conversation',
+    component: PageConversationComponent,
+    //data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/page-conversation',
+    pathMatch: 'full'
+  },
+  //{ path: '**', component: PageNotFoundComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -17,12 +36,18 @@ import { SimulationComponent } from './simulation/simulation.component';
     MessageComponent,
     ChatComponent,
     ChatInputComponent,
-    SimulationComponent
+    SimulationComponent,
+    ConfigComponent,
+    PageConversationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+     RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [FredService,UserService],
   bootstrap: [AppComponent]

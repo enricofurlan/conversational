@@ -1,7 +1,7 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FredService } from '../fred.service';
-import { UserService } from '../user.service';
+import { FredService } from '../services/fred.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-message',
