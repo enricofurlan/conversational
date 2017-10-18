@@ -1,0 +1,40 @@
+.simulator {
+}
+
+.simulator__graph {
+  max-width: 100%;
+  height: auto
+}
+
+.simulator__label {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.simulator__input-text {
+  width: calc(100% - 10px);
+  margin-bottom: 5px;
+}
+
+.simulator__input-slider {
+  width: calc(100% - 10px);
+  margin-bottom: 5px;
+}
+
+.simulator__button {
+  border-radius: 10px;
+  background: #ccc;
+  border: none;
+  width: 100%;
+  padding: 3px;
+}
+
+.simulator__button:focus{
+  outline: none;
+}
+
+
+.simulator__button:hover{
+  background: #ddd;
+}
